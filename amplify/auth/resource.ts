@@ -7,5 +7,13 @@ import { defineAuth } from '@aws-amplify/backend';
 export const auth = defineAuth({
   loginWith: {
     email: true,
+    phone: true,
+
+  },
+
+  multifactor: {
+    sms: true,
+    mode: 'OPTIONAL',
+    totp: true,
   },
 });
